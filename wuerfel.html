@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="wuerfel.js" defer></script>
+
+</head>
+
+    <body>
+
+	<h1>Dice Game</h1>
+
+	<div class="player1">
+		<h2>Player 1</h2>
+		<input id="button" onclick="neuerWurfOne()" type="button" name="button" value="Roll the dice">
+		
+		<div id="erg"><img src="PinClipart_cube_0.png" id="CubeOne" width="100%" height="100%"></div>
+		<div id="erg2"><img src="PinClipart_cube_0.png" id="CubeTwo" width="100%" height="100%"></div>
+
+		<br>
+		<div id="sum_player1"></div>
+
+	</div>
+	<br>
+	<div class="player2">
+		<h2>Player 2</h2>
+        <input id="button2" onclick="neuerWurfTwo()" type="button" value="Roll the dice">
+		
+		<div id="erg_player2"><img src="PinClipart_cube_0.png" id="CubeOne2" width="100%" height="100%"></div>
+		<div id="erg2_player2"><img src="PinClipart_cube_0.png" id="CubeTwo2" width="100%" height="100%"></div>
+		<br>
+		<div id="sum_player2"></div>
+
+	</div>
+		<br>
+	<div class="player1">
+		<h2>Wins Player 1:</h2>
+		<div id="wins_player1"></div>
+		<br>
+	</div>
+	<div class="player2">
+		<h2>Wins Player 2:</h2>
+		<div id="wins_player2"></div>
+	</div>
+        
+        <div id="calculate">
+        <a href="einbinden_4.html">Hier kannst du eine Summe berechnen!</a>
+        </div>
+
+    </body>
+
+</html>
+
