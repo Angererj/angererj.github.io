@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+    <!-- Head -->
+	<head>
+        
+        <!-- Verlinkungen -->
+        <link rel="stylesheet" type="text/css" href="css/index_style.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+        <style>
+            html{
+                background-color: lightgray;
+            }
+            /*Body*/
+            body{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                padding-top: 10rem;
+                background-image: url("wallpaper.png");
+                background-size: 100vw;
+                background-repeat: no-repeat;
+            }
+            /*Navigation*/
+            #mainmenu{
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                background-color:rgb(15,30,69);
+                width: 100%;
+                position: fixed;
+                z-index: 2;
+            }
+            #mainmenu #flex-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                height: 5rem;
+                margin-right: 5%;
+                margin-left: 5%;
+                align-items:center;
+            }
+            #mainmenu #flex-container div{
+                width: 20%;
+            }
+            #mainmenu #flex-container div a {
+                text-decoration: none;
+            }
+            #mainmenu #flex-container div a p{
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                font-size: 2.7vw;
+                font-family: "Noto Sans JP";
+            }
+            #mainmenu #flex-container div a p:hover{
+                text-decoration: underline;
+                text-decoration-color: #47c8f1;
+                text-decoration-style: solid;
+            }
+            #mainmenu #flex-container div a img{
+                margin-top: 0.5rem;
+                margin-bottom: 0.438rem;
+                display: flex;
+                justify-content: center;
+            }
+            #headerpicture{
+                display: flex;
+                justify-content: center;
+                background-color: #47c8f1;
+                max-height: 80px;
+            }
+            /*Inhalt*/
+            .wrapperstart{
+                width:75%;
+                align-items: center;
+                padding-left: 10%;
+                padding-right: 10%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 2.5rem;
+                margin-top: 2rem;
+                padding-top:0.5rem;
+                background-color:white;
+                border-style: solid;
+                border-color: white;
+                border-radius: 0.375rem;
+                border-width: 0.125rem;
+            }
+            .wrapperstart p{
+                font-size: 1.2rem;
+                line-height: 1.2;
+                text-align:  justify;
+            }
+            .wrapperstart h1{
+                text-align: center;
+                font-size: 6vw;
+            }
+            .wrapperstart a{
+                text-decoration: none;
+            }
+            /*Footer*/
+            footer{
+                height: 12.5rem;
+                background-color:rgb(15,30,69);
+                text-align:center; 
+                color: white;
+                padding-top: 1.25rem;
+                margin-bottom: -0.625rem;
+                margin-right: -0.625rem;
+                margin-left: -0.625rem;
+                border-top-style: solid;
+                border-top-color: black;
+                border-top-width: thin;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .footernav{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                height: 70%;
+            }
+            .footernav .footernavbox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 5rem;
+                width: 5rem;
+                margin-top: 2vw;
+                margin-bottom: 2vw;
+                margin-left: 2vw;
+                margin-right: 2vw;
+                border-style: solid;
+                border-radius: 50%;
+                border-color: black;
+                background-color: rgb(15,30,69);
+            }
+            .footernav .footernavbox a img{
+                width: 60%;
+                height: 60%;
+            }
+            footer .footerptag{
+                color: white;
+                font-style: italic;
+                font-size: 1vw;
+            }
+            .footerboxtwo{
+                width: 100%;
+                height: 50%;
+                background-color: #091229;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            @media screen and (max-width: 992px) {
+            body {
+                background-color: darkgrey;
+            }
+            img {
+                width: 100%;
+            }
+            .wrapperstart{
+                width:90%;
+                align-items: center;
+                padding-left: 3%;
+                padding-right: 3%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 2.5rem;
+                margin-top: 2rem;
+                padding-top:0.5rem;
+                background-color:white;
+                border-style: solid;
+                border-color: white;
+                border-radius: 0.375rem;
+                border-width: 0.125rem;
+            }
+            }
+            @media screen and (max-width: 600px) {
+            body {
+                background-color: black;
+            }
+            img {
+                width: 100%;
+            }
+            #mainmenu #flex-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 8rem;
+                margin-right: 5%;
+                margin-left: 5%;
+                align-items:center;
+            }
+            }
+            @media screen and (min-width: 993px){
+            body {
+                background-color: lightgray;
+            }
+            #mainmenu #flex-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                height: 4rem;
+                margin-right: 5%;
+                margin-left: 5%;
+                align-items:center;
+            }
+            }
+        </style>
+        
+        <!-- Metaangaben -->
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Titel -->
+		<title>
+				American Football
+		</title>	
+		
+	</head>
+		
+	<body>
+        <!-- Navigationsleiste -->
+            <div id="mainmenu">
+                <div id="flex-container">
+                    <div><a href="rules.html"><p>Regeln</p></a></div>
+                    <div><a id="headerpicture" href="index.html"><p>Start</p></a></div>
+                </div>
+            </div>
+        
+        <div class="wrapperstart">
+        
+            <!-- Wrapper -->
+            
+            <h1>American Football Regeln</h1>
+            <br>
+        <!-- Regelvideo -->
+        <iframe width="746" height="420" src="https://www.youtube.com/embed/QIjVePrc2O8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+        <!-- Inhalt -->
+            <h2>Grundlegende Regeln</h2>  
+            <ul>
+                <li>
+                    Wie bei Ballsportarten üblich, gilt es auch beim American Football mehr <b>Punkte</b>, als der Gegner zu erzielen.
+                </li>
+                <li>
+                    Die Spielzeit beim American Football beträgt <b>4×15 Minuten</b>(= 4 Quarter).
+                    Dabei handelt es sich um die Nettospielzeit.
+                </li>
+                <li>
+                    Bei Spielunterbrechungen wird auch die Zeit gestoppt.
+                </li>
+                <li>
+                    Nach dem ersten und dritten Viertel werden die Seiten gewechselt.
+                </li>
+                <li>
+                    Das Spielfeld beim American Football ist <b>100 Yards</b> lang und 53,3 Yards breit.
+                    Dies entspricht den Maßen 91,4 x 48,7 m.
+                    1 Yard sind knapp <b>0,9 m</b>.
+                </li>
+                <li>
+                    Das Hauptziel beim American Football ist der Raumgewinn <b>(Offense)</b> und die Verteidigung des eigenen Spielgebiets <b>(Defense)</b>.
+                    Punkte gibt es, indem der Football in die gegnerische Endzone des Spielfelds transportiert oder gekickt wird.
+                    Die Regeln beim American Football werden durch vier bis sieben Schiedsrichter überwacht.
+                </li>
+                <li>
+                    Fouls werden durch <b>gelbe Flaggen</b> signalisiert.
+                    Allerdings werden Fouls erst nach einem aktuellen Spielzug behandelt.
+                    Bei Fouls kann die foulende Mannschaft eine Sanktion anfechten und den Spielzug gelten, bzw. erneut ausführen lassen.
+                    Fouls werden mit einem <b>Raumverlust</b> von 5, 10 oder 15 Yards geahndet.
+                    Weitere Strafen sind die Zuweisung eines neuen First Downs (vier Angriffsversuche), Verlust des Angriffsrechtes oder Ausschluss des foulenden Spielers.
+                </li>
+            </ul>
+        
+        <br>
+        
+    <h3>Kick-Off</h3>
+        <p>
+            Per <b>Münzwurf</b> wird bestimmt, wer zunächst den Ball bekommt.
+            Gestartet wird von der verteidigenden Mannschaft mit einem <b>Kick-Off</b> von der eigenen 35 Yard-Linie.
+            Ziel ist es, den Ball soweit wie möglich in die Hälfte des Gegners zu befördern.
+            Die Offensive muss den Ball fangen und in die Richtung, aus der der Kick-Off erfolgt ist, zurücktragen.
+            Die Defense muss diesen Angriff unterbinden.
+            An der Stelle, an der die Defense die Offense erfolgreich stoppt, beginnt die <b>„Series of Downs“</b>.
+        </p>
+        
+        <br>
+        
+    <h3>Series Of Downs</h3>
+        <p>
+            Die Offense muss nun innerhalb von <b>vier Downs</b> eine Strecke von mindestens <b>10 Yards</b> (9,14 m) hinter sich bringen.
+            Dabei kann der Football für den Raumgewinn <b>geworfen</b> oder im <b>Lauf</b> (Run) vorangetrieben werden.
+            Beim Lauf sollen weitere Spieler der eigenen Mannschaft dafür sorgen, dass die Verteidiger aus dem Weg geräumt werden.
+            Einen Wurfpass führt der <b>Quarterback</b> aus.
+            Dafür geht dieser zunächst einige Schritte zurück und wirft diesen dann zu einem eigenen Mitspieler.
+            Dieser muss den Ball fangen, bevor das Spielgerät auf dem Boden ankommt.
+            Der nächste Down erfolgt an dem Punkt, wo der Run-Spieler gestoppt wurde.
+            Wurden mindestens 10 Yards zurückgelegt, erhält das Offense-Team weitere <b>vier Down-Versuche.</b>
+        </p>
+        
+        
+        <br>
+        
+    <h3>Punkte erzielen</h3>
+        <p>
+            Hauptziel ist es, durch den Raumgewinn <b>Punkte</b> für das Team zu gewinnen. Dies kann auf verschiedene Arten geschehen.
+        </p>
+        <ol>
+            <li>
+                <b>Touchdown:</b> Der <b>Touchdown</b> bringt <b>sechs Punkte</b>. Hierbei wird der Ball durch einen Run über das Spielfeld oder einen Pass über die gegnerische <b>Endzone</b> befördert. Die Mannschaft, die einen Punkt per Touchdown erzielt hat, bekommt einen neuen Try von der 3-Yard-Linie.
+            </li>
+            <li>
+                <b>Extra Point</b> – 1 Punkt: <b>Kick</b> durch den oberen Bereich des Tores nach Try.
+            </li>
+            <li>
+                <b>Conversion</b> – 2 Punkte: <b>Erneuter Touchdown</b> nach Try.
+            </li>
+            <li>
+                <b>Field Goal</b> – 3 Punkte: Kann nach dem dritten Try kein First Down oder Touchdown erzielt werden, steht es der Offense-Mannschaft frei, ein Field Goal zu erreichen. Das Field-Goal muss mit dem vierten Try versucht werden. Wie beim Extra Point muss der Ball hierbei per Kick in die obere Hälfte des Tores befördert werden.
+            </li>
+        </ol>
+        <p>
+            Getauscht werden die Offense- und Defense-Rechte, wenn vor einem vierten Versuch ein First Down nicht mehr möglich ist und ein Field Goal nicht erzielt werden kann. Die <b>Special-Teams-Mannschaft</b> kickt den Ball aus der eigenen Hand in das gegnerische Feld. Das Angriffsrecht wechselt zudem sofort, wenn der angreifende Spieler den Ball fallen lässt oder die Defense-Mannschaft den Ball abfängt. Das Abfangen des Balls wird auch <b>„Interception“</b> genannt.
+            <br>
+            Zu den gängigsten Begriffen im American Football gehören <b>„Fumble“</b>, <b>„Endzone“</b>, <b>„Conversion“</b> oder <b>„Running Back“</b>. Ein Lexikon mit der Erklärung verschiedener Spielbegriffe beim American Football findet ihr bei <a href="https://www.ran.de/us-sport/nfl/nfl-news/nfl-lexikon-der-wichtigsten-begriffe-im-american-football" target="_blank"><b>Ran</b>.</a>
+        </p>
+        
+
+        </div>
+        
+        <br>
+        <br>
+        <br>
+    <!-- Footer -->
+        <footer>
+            
+            <div class="footernav">
+                <div class="footernavbox">
+                    <a href="https://www.nfl.com/" target="_blank"><img src="NFLLogo.png" alt="NFL"></a>
+                </div>
+                <div class="footernavbox">
+                    <a href="http://football.at/" target="_blank"><img src="AFLlogo.jpg" alt="AFL"></a>
+                </div>
+            </div>
+            
+            
+            <div class="footerboxtwo">
+                <div class="footerptag">
+                    <p style="font-size: 1vw">Website von Jan Angerer 2021</p>
+                </div>
+            </div>
+                
+        </footer>	
+        
+  
+	</body>
+</html>

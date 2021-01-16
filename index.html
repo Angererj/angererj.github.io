@@ -1,58 +1,292 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dice</title>
-
-    <link rel="stylesheet" href="style.css">
-    
-    <script src="wuerfel.js" defer></script>
-
-</head>
-
-    <body>
-
-	<h1>Dice Game</h1>
-
-	<div class="player1">
-		<h2>Player 1</h2>
-		<input id="button" onclick="neuerWurfOne()" type="button" name="button" value="Roll the dice">
-		
-		<div id="erg"><img src="PinClipart_cube_0.png" id="CubeOne" width="100%" height="100%"></div>
-		<div id="erg2"><img src="PinClipart_cube_0.png" id="CubeTwo" width="100%" height="100%"></div>
-
-		<br>
-		<div id="sum_player1"></div>
-
-	</div>
-	<br>
-	<div class="player2">
-		<h2>Player 2</h2>
-        <input id="button2" onclick="neuerWurfTwo()" type="button" value="Roll the dice">
-		
-		<div id="erg_player2"><img src="PinClipart_cube_0.png" id="CubeOne2" width="100%" height="100%"></div>
-		<div id="erg2_player2"><img src="PinClipart_cube_0.png" id="CubeTwo2" width="100%" height="100%"></div>
-		<br>
-		<div id="sum_player2"></div>
-
-	</div>
-		<br>
-	<div class="player1">
-		<h2>Wins Player 1:</h2>
-		<div id="wins_player1"></div>
-		<br>
-	</div>
-	<div class="player2">
-		<h2>Wins Player 2:</h2>
-		<div id="wins_player2"></div>
-	</div>
+<html lang="de">
+    <!-- Head -->
+	<head>
         
-        <div id="calculate">
-        <a href="einbinden_4.html">Hier kannst du eine Summe berechnen!</a>
+        <!-- Verlinkungen -->
+        <link rel="stylesheet" type="text/css" href="css/index_style.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+        <style>
+            html{
+                background-color: lightgray;
+            }
+            /*Body*/
+            body{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                padding-top: 10rem;
+                background-image: url("wallpaper.png");
+                background-size: 100vw;
+                background-repeat: no-repeat;
+            }
+            /*Navigation*/
+            #mainmenu{
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                background-color:rgb(15,30,69);
+                width: 100%;
+                position: fixed;
+                z-index: 2;
+            }
+            #mainmenu #flex-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                height: 5rem;
+                margin-right: 5%;
+                margin-left: 5%;
+                align-items:center;
+            }
+            #mainmenu #flex-container div{
+                width: 20%;
+            }
+            #mainmenu #flex-container div a {
+                text-decoration: none;
+            }
+            #mainmenu #flex-container div a p{
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                font-size: 2.7vw;
+                font-family: "Noto Sans JP";
+            }
+            #mainmenu #flex-container div a p:hover{
+                text-decoration: underline;
+                text-decoration-color: #47c8f1;
+                text-decoration-style: solid;
+            }
+            #mainmenu #flex-container div a img{
+                margin-top: 0.5rem;
+                margin-bottom: 0.438rem;
+                display: flex;
+                justify-content: center;
+            }
+            #headerpicture{
+                display: flex;
+                justify-content: center;
+                background-color: #47c8f1;
+                max-height: 80px;
+            }
+            /*Inhalt*/
+            .wrapperstart{
+                width:75%;
+                align-items: center;
+                padding-left: 10%;
+                padding-right: 10%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 2.5rem;
+                margin-top: 2rem;
+                padding-top:0.5rem;
+                background-color:white;
+                border-style: solid;
+                border-color: white;
+                border-radius: 0.375rem;
+                border-width: 0.125rem;
+            }
+            .wrapperstart p{
+                font-size: 1.2rem;
+                line-height: 1.2;
+                text-align:  justify;
+            }
+            .wrapperstart h1{
+                text-align: center;
+                font-size: 6vw;
+            }
+            .wrapperstart a{
+                text-decoration: none;
+            }
+            /*Footer*/
+            footer{
+                height: 12.5rem;
+                background-color:rgb(15,30,69);
+                text-align:center; 
+                color: white;
+                padding-top: 1.25rem;
+                margin-bottom: -0.625rem;
+                margin-right: -0.625rem;
+                margin-left: -0.625rem;
+                border-top-style: solid;
+                border-top-color: black;
+                border-top-width: thin;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .footernav{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                height: 70%;
+            }
+            .footernav .footernavbox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 5rem;
+                width: 5rem;
+                margin-top: 2vw;
+                margin-bottom: 2vw;
+                margin-left: 2vw;
+                margin-right: 2vw;
+                border-style: solid;
+                border-radius: 50%;
+                border-color: black;
+                background-color: rgb(15,30,69);
+            }
+            .footernav .footernavbox a img{
+                width: 60%;
+                height: 60%;
+            }
+            footer .footerptag{
+                color: white;
+                font-style: italic;
+                font-size: 1vw;
+            }
+            .footerboxtwo{
+                width: 100%;
+                height: 50%;
+                background-color: #091229;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            @media screen and (max-width: 992px) {
+            body {
+                background-color: darkgrey;
+            }
+            img {
+                width: 100%;
+            }
+            .wrapperstart{
+                width:90%;
+                align-items: center;
+                padding-left: 3%;
+                padding-right: 3%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 2.5rem;
+                margin-top: 2rem;
+                padding-top:0.5rem;
+                background-color:white;
+                border-style: solid;
+                border-color: white;
+                border-radius: 0.375rem;
+                border-width: 0.125rem;
+            }
+            }
+            @media screen and (max-width: 600px) {
+            body {
+                background-color: black;
+            }
+            img {
+                width: 100%;
+            }
+            #mainmenu #flex-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 8rem;
+                margin-right: 5%;
+                margin-left: 5%;
+                align-items:center;
+            }
+            }
+            @media screen and (min-width: 993px){
+            body {
+                background-color: lightgray;
+            }
+            #mainmenu #flex-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                height: 4rem;
+                margin-right: 5%;
+                margin-left: 5%;
+                align-items:center;
+            }
+            }
+        </style>
+        
+        <!-- Metaangaben -->
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Titel -->
+		<title>
+				American Football
+		</title>	
+		
+	</head>
+		
+	<body>
+        <!-- Navigationsleiste -->
+            <div id="mainmenu">
+                <div id="flex-container">
+                    <div><a href="rules.html"><p>Regeln</p></a></div>
+                    <div><a id="headerpicture" href="index.html"><p>Start</p></a></div>
+                </div>
+            </div>
+        
+        <div class="wrapperstart">
+        
+        <!-- Wrapper -->
+        
+            
+            <p></p>
+            
+            <h1>Willkommen!</h1>
+            <br>
+            <br>
+            <br>
+            <!-- Einleitungstext -->
+            <p>
+                Tauchen Sie ein in die Welt des American Football! <br>
+                Verfolgen Sie die Geschichte der populärsten Sportart in den USA. <br> 
+                Informieren Sie sich über die zahlreichen <a href="rules.html"><b>Spielregeln.</b></a> <br>
+                Seit 1978 wird American Football auch in Österreich gespielt und erfreut sich zunehmender Beliebtheit. <br>
+            </p>
+            <br>
+            
+                <p>Im Anschluss auf dieser Seite finden Sie einige von mir gemachte Bilder von vor ein paar Wochen</p>
+
+                <img src="DSC_0117.png" width="70%">
+                <img src="DSC_0110.png" width="70%">
+                <img src="DSC_0113.png" width="70%">
+                <img src="DSC_0120.png" width="70%">
+                
+            
         </div>
-
-    </body>
-
+        
+        <br>
+        <br>
+        <br>
+    <!-- Footer -->
+        <footer>
+            
+            <div class="footernav">
+                <div class="footernavbox">
+                    <a href="https://www.nfl.com/" target="_blank"><img src="NFLLogo.png" alt="NFL"></a>
+                </div>
+                <div class="footernavbox">
+                    <a href="http://football.at/" target="_blank"><img src="AFLlogo.jpg" alt="AFL"></a>
+                </div>
+            </div>
+            
+            
+            <div class="footerboxtwo">
+                <div class="footerptag">
+                    <p style="font-size: 1vw">Website von Jan Angerer 2021</p>
+                </div>
+            </div>
+                
+        </footer>	
+        
+  
+	</body>
 </html>
-
